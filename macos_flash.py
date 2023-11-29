@@ -30,7 +30,7 @@ if os.path.exists(hex_path):
     try:
         os.chdir(project_path + "/macos")
         os.system(
-            f"sudo ./WCHISPTool_CMD -p 0x{device_location_id} -c ch582_flash.config -o program -f {hex_path}"
+            f"./WCHISPTool_CMD -p 0x{device_location_id} -c ch582_flash.config -o program -f {hex_path}"
         )
     except Exception as e:
         print(e)
